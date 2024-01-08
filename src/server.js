@@ -60,7 +60,8 @@ const checkRemoteConnection = async () => {
     //create a todo
 
     app.get("/pastes", async (req, res) => {
-        const result = await pool.query('SELECT * FROM pastes ORDER BY time DESC LIMIT 10');
+        // const result = await pool.query('SELECT * FROM pastes ORDER BY time DESC LIMIT 10');
+        const result = await pool.query('SELECT * FROM pastes ');
         res.json(result.rows);
     });
 
