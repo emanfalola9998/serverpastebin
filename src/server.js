@@ -191,7 +191,7 @@ const checkRemoteConnection = async () => {
     //Start the server on the given port
 
 
-    const porthost = process.env.PORTHOST;
+    const porthost = process.env.porthost || 5000;
     if (!porthost) {
         throw 'Missing PORT environment variable.  Set it in .env file.';
     }
